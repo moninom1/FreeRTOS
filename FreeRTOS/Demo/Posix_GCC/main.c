@@ -268,7 +268,7 @@ void vApplicationTickHook( void )
 
 /*-----------------------------------------------------------*/
 
-void traceOnEnter()
+void traceOnEnter( void )
 {
     #if ( TRACE_ON_ENTER == 1 )
         int xReturn;
@@ -455,7 +455,7 @@ void handle_sigint( int signal )
         printf( "chdir into %s error is %d\n", BUILD, errno );
     }
 
-    exit( 2 );
+    _exit( 2 );
 }
 
 /*-----------------------------------------------------------*/
